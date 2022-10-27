@@ -15,7 +15,7 @@ request(aURL, (error, response, body) => {
       console.log("error:", error);
     } else {
       console.log(
-        `Downloaded and saved ${response.headers} bytes to ${localPathToFile}`
+        `Downloaded and saved ${response.headers.length} bytes to ${localPathToFile}`
       );
     }
     // file written successfully
