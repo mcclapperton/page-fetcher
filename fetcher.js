@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 const request = require("request");
 // const { request } = require("http");
@@ -15,7 +14,7 @@ request(aURL, (error, response, body) => {
       console.log("error:", error);
     } else {
       console.log(
-        `Downloaded and saved ${response.headers.length} bytes to ${localPathToFile}`
+        `Downloaded and saved ${response.headers["content-length"]} bytes to ${localPathToFile}`
       );
     }
     // file written successfully
